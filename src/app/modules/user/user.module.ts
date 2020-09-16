@@ -1,19 +1,25 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { UserRoutingModule } from './user-routing.module';
-import { ProfileComponent } from './profile/profile.component';
-import { RegisterComponent } from './register/register.component';
+import { UserComponent } from './user.component';
+import { RouterModule } from '@angular/router';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
   declarations: [
-    ProfileComponent,
-    RegisterComponent
+    UserComponent,
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    RouterModule,
+    FlexLayoutModule,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  exports: [
+    UserComponent,
   ]
 })
 export class UserModule { }

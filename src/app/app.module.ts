@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layouts/default/default.module';
-import { FullwidthModule } from './layouts/fullwidth/fullwidth.module';
 
 @NgModule({
   declarations: [
@@ -15,8 +14,7 @@ import { FullwidthModule } from './layouts/fullwidth/fullwidth.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DefaultModule,
-    FullwidthModule
+    DefaultModule
   ],
   providers: [],
   bootstrap: [AppComponent]

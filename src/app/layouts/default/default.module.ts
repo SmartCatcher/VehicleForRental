@@ -1,24 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DefaultComponent } from './default.component';
-import { HomeComponent } from '../../modules/home/home.component';
+
+import { DefaultRoutingModule } from './default-routing.module';
 import { RouterModule } from '@angular/router';
+import { HomeModule } from '../../modules/home/home.module';
+import { DefaultComponent } from './default.component';
+import { HeaderModule } from '../header/header.module';
+import { FooterModule } from '../footer/footer.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ContactusComponent } from '../../modules/contactus/contactus.component';
-import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
-  declarations: [
-    DefaultComponent,
-    HomeComponent,
-    ContactusComponent
-  ],
+  declarations: [DefaultComponent],
   imports: [
     CommonModule,
+    DefaultRoutingModule,
+    HomeModule,
+    HeaderModule,
+    FooterModule,
     RouterModule,
-    FlexLayoutModule,
-    SharedModule,
+    FlexLayoutModule
   ]
 })
 export class DefaultModule { }
